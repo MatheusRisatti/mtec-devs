@@ -1,0 +1,15 @@
+git config --global user.name MatheusRisatti
+git config --global user.email risattimatheus@gmail.com
+git clone
+
+/* Começando uma solução e um projeto MVC */
+dotnet new sln --name MtecDevs
+
+dotnet new mvc -o MtecDevs -f net6.0
+
+dotnet sln add MtecDevs\MtecDevs.csproj
+
+/* Dados */
+Usuários - Devs/Adms/Profs
+    Dados básicos: Nome completo, data de nascimento, Foto de Perfil, TipoDev
+TipoDev - Front/Back/Full/UX-UI/Design/
