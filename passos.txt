@@ -13,3 +13,10 @@ dotnet sln add MtecDevs\MtecDevs.csproj
 Usuários - Devs/Adms/Profs
     Dados básicos: Nome completo, data de nascimento, Foto de Perfil, TipoDev
 TipoDev - Front/Back/Full/UX-UI/Design/
+
+Criou a classe de Contexto
+Criou a Connection String
+Adicionou os serviços de DbContext e Identity ao program
+
+Criar a migração
+dotnet ef
