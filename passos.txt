@@ -20,3 +20,9 @@ Adicionou os serviços de DbContext e Identity ao program
 
 Criar a migração
 dotnet ef
+
+dotnet tool install --global dotnet-ef
+
+dotnet ef migrations add criar-banco
+
+dotnet ef database update
