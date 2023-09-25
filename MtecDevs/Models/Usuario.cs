@@ -11,7 +11,6 @@ namespace MtecDevs.Models;
         [Key]
         public string UserId { get; set; }
         [ForeignKey("UserId")]
-
         public IdentityUser AccountUser { get; set; }
 
         [Required(ErrorMessage = "Informe o Nome")]
