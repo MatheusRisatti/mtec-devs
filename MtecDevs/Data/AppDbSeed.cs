@@ -76,6 +76,27 @@ namespace MtecDevs.Data;
             }
             // Adiciona a conta no banco
             builder.Entity<IdentityUser>().HasData(users); 
+
+            // Cria a conta pessoal do usuário
+            List<Usuario> usuarios = new(){
+                new Usuario(){
+                    UserId = users[0].Id,
+                    Nome = "Matheus Clementino Risatti",
+                    DataNascimento = DateTime.Parse("22/02/2007"),
+                    TipoDevId = 2,
+                    Foto = "/img/usuarios/avatar.png"
+                }
+            };
+            builder.Entity<Usuario>().HasData(usuarios);
+
+            // Associar o usuário ao tipo de perfil
+            List<IdentityUserRole<string>> userRoles = new() {
+                new IdentityUserRole<string>(){
+                    UserId = users[0].Id,
+                    RoleId = roles[0].Id
+                }
+            };
+            builder.Entity<IdentityUserRole<string>>().HasData(userRoles);
             #endregion
         }
     }

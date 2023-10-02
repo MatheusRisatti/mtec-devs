@@ -16,7 +16,7 @@ namespace MtecDevs.Data;
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
-            // FluentAPI
+            AppDbSeed appDbSeed = new(builder);
         }
 
     }
