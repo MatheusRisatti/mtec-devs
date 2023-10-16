@@ -239,6 +239,43 @@ namespace MtecDevs.Migrations
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
+            migrationBuilder.InsertData(
+                table: "AspNetRoles",
+                columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
+                values: new object[,]
+                {
+                    { "2c17416c-f881-4b3f-b86f-d1aa7bf556fd", "8aa10203-1e76-4f24-b08d-887709bd3479", "Moderador", "Moderador" },
+                    { "478b2abc-e3c8-4da3-a098-6755e2cc0ad1", "aeb29708-92bb-4e2a-b084-7eff2d23ad2e", "Administrador", "ADMINISTRADOR" },
+                    { "d4abd747-b7a5-44d8-a9f4-c3945620737a", "3678697c-122b-4937-a23e-b95ad77800a5", "Usuario", "USUARIO" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "AspNetUsers",
+                columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
+                values: new object[] { "7ce4aa6d-15c2-47cf-9e36-7d6479021d88", 0, "09a7bd61-61b6-4616-b2f2-9a376cf45651", "risattimatheus@gmail.com", true, false, null, "RISATTIMATHEUS@GMAIL.COM", "MAPOKO", "AQAAAAEAACcQAAAAEKx1t1RAaFw4KIFWdGWw2+F4XE25BOmkkCyi2TLCsDmB4LPOUdvhVOtO10OI3FbVbA==", "14991911777", true, "1c49ba82-4174-40a9-b7b1-f1837f17e8a7", false, "Mapoko" });
+
+            migrationBuilder.InsertData(
+                table: "TipoDev",
+                columns: new[] { "Id", "Nome" },
+                values: new object[,]
+                {
+                    { (byte)1, "FullStack" },
+                    { (byte)2, "FrontEnd" },
+                    { (byte)3, "BackEnd" },
+                    { (byte)4, "Design" },
+                    { (byte)5, "Jogos" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "AspNetUserRoles",
+                columns: new[] { "RoleId", "UserId" },
+                values: new object[] { "478b2abc-e3c8-4da3-a098-6755e2cc0ad1", "7ce4aa6d-15c2-47cf-9e36-7d6479021d88" });
+
+            migrationBuilder.InsertData(
+                table: "Usuario",
+                columns: new[] { "UserId", "DataNascimento", "Foto", "Nome", "TipoDevId" },
+                values: new object[] { "7ce4aa6d-15c2-47cf-9e36-7d6479021d88", new DateTime(2007, 2, 22, 0, 0, 0, 0, DateTimeKind.Unspecified), "/img/usuarios/avatar.png", "Matheus Clementino Risatti", (byte)2 });
+
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
                 table: "AspNetRoleClaims",

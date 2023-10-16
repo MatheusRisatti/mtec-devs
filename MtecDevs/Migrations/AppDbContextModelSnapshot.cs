@@ -47,22 +47,22 @@ namespace MtecDevs.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "b5ca1749-bc11-4866-bc46-1793c1d246d6",
-                            ConcurrencyStamp = "a546449b-5f81-4a61-94bd-fa4abce911ec",
+                            Id = "478b2abc-e3c8-4da3-a098-6755e2cc0ad1",
+                            ConcurrencyStamp = "aeb29708-92bb-4e2a-b084-7eff2d23ad2e",
                             Name = "Administrador",
                             NormalizedName = "ADMINISTRADOR"
                         },
                         new
                         {
-                            Id = "34280970-c9ae-43eb-8989-bcd04cc920ad",
-                            ConcurrencyStamp = "785ca2c3-9da9-479a-a66e-0ee1fa4fe89f",
+                            Id = "2c17416c-f881-4b3f-b86f-d1aa7bf556fd",
+                            ConcurrencyStamp = "8aa10203-1e76-4f24-b08d-887709bd3479",
                             Name = "Moderador",
                             NormalizedName = "Moderador"
                         },
                         new
                         {
-                            Id = "0f6f56b7-cce5-4dad-adc2-0746a99bc39e",
-                            ConcurrencyStamp = "b2bdcbca-771d-4f22-9487-7daa08f181ef",
+                            Id = "d4abd747-b7a5-44d8-a9f4-c3945620737a",
+                            ConcurrencyStamp = "3678697c-122b-4937-a23e-b95ad77800a5",
                             Name = "Usuario",
                             NormalizedName = "USUARIO"
                         });
@@ -157,18 +157,18 @@ namespace MtecDevs.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "62ab6b19-5617-45fc-b07b-b7b9ac8a93d8",
+                            Id = "7ce4aa6d-15c2-47cf-9e36-7d6479021d88",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "da70ecfe-1fba-4ccc-8aff-a836a6aef671",
+                            ConcurrencyStamp = "09a7bd61-61b6-4616-b2f2-9a376cf45651",
                             Email = "risattimatheus@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "RISATTIMATHEUS@GMAIL.COM",
                             NormalizedUserName = "MAPOKO",
-                            PasswordHash = "AQAAAAEAACcQAAAAELC554+KnQ6Ic6ASn1s5eVz4aDPP1mR8VhOSzt0YYZdDLu4hIXwAUbEEd0Rxz2P+hQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEKx1t1RAaFw4KIFWdGWw2+F4XE25BOmkkCyi2TLCsDmB4LPOUdvhVOtO10OI3FbVbA==",
                             PhoneNumber = "14991911777",
                             PhoneNumberConfirmed = true,
-                            SecurityStamp = "daf464d6-703e-4acf-9b1d-87476a2b94ae",
+                            SecurityStamp = "1c49ba82-4174-40a9-b7b1-f1837f17e8a7",
                             TwoFactorEnabled = false,
                             UserName = "Mapoko"
                         });
@@ -236,8 +236,8 @@ namespace MtecDevs.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = "62ab6b19-5617-45fc-b07b-b7b9ac8a93d8",
-                            RoleId = "b5ca1749-bc11-4866-bc46-1793c1d246d6"
+                            UserId = "7ce4aa6d-15c2-47cf-9e36-7d6479021d88",
+                            RoleId = "478b2abc-e3c8-4da3-a098-6755e2cc0ad1"
                         });
                 });
 
@@ -331,7 +331,7 @@ namespace MtecDevs.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = "62ab6b19-5617-45fc-b07b-b7b9ac8a93d8",
+                            UserId = "7ce4aa6d-15c2-47cf-9e36-7d6479021d88",
                             DataNascimento = new DateTime(2007, 2, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Foto = "/img/usuarios/avatar.png",
                             Nome = "Matheus Clementino Risatti",
