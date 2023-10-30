@@ -1,29 +1,45 @@
-git config --global user.name MatheusRisatti
-git config --global user.email risattimatheus@gmail.com
-git clone
+/* Configuração do GIT */
+git config --global user.email gallojunior@gmail.com
+git config --global user.name GalloJunior
+git clone https://github.com/gallojunior/mtec-devsB.git
+
+cd MtecDevs
+dotnet restore
 
 /* Começando uma solução e um projeto MVC */
 dotnet new sln --name MtecDevs
-
 dotnet new mvc -o MtecDevs -f net6.0
-
 dotnet sln add MtecDevs\MtecDevs.csproj
 
+/* Instalando os pacotes */
+dotnet add package Microsoft.EntityFrameworkCore --version 6.0.21
+dotnet add package Microsoft.EntityFrameworkCore.Design --version 6.0.21
+dotnet add package Pomelo.EntityFrameworkCore.MySql --version 6.0.2
+dotnet add package Microsoft.AspNetCore.Identity.EntityFrameworkCore --version 6.0.21
+
 /* Dados */
-Usuários - Devs/Adms/Profs
-    Dados básicos: Nome completo, data de nascimento, Foto de Perfil, TipoDev
+Usuários  - Devs/Admin/Prof
+    Dados básicos: Nome, Data nascimento, Foto, TipoDev
 TipoDev - Front/Back/Full/UX-UI/Design/
 
+/* Salvando no GitHub */ 
+git add .
+git commit -m "Criado o projeto e as classes de dados"
+git push
+
 Criou a classe de Contexto
-Criou a Connection String
+Criou a ConnectionString
 Adicionou os serviços de DbContext e Identity ao program
 
 Criar a migração
+// Testar se tem a ferramenta de migração
 dotnet ef
 
+// Instala no PC
 dotnet tool install --global dotnet-ef
 
+// Comandos para criar e aplicar as migrações
 dotnet ef migrations add criar-banco
-
 dotnet ef database update
 
+// Criar a classe para popular dados

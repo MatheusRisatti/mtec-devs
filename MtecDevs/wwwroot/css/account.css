@@ -5,30 +5,30 @@ main {
     justify-content: center;
 }
 
-form{
+form {
     width: 400px !important;
 }
 
-.text-decoration-none:hover{
+.text-decoration-none:hover {
     text-decoration: underline !important;
 }
 
-.separator{
+.separator {
     display: flex;
     align-items: center;
-    color: var(--bbs-body-color);
+    color: var(--bs-body-color);
     margin: 15px 0;
 }
 
-.separator h6{
+.separator h6 {
     padding: 0 10px;
     font-weight: normal;
-    color: var(--bbs-body-color);
+    color: var(--bs-body-color);
     margin-bottom: 0.2rem;
 }
 
 .separator .line {
     flex: 1;
     height: 1px;
-    background-color: var(--bbs-body-color);
+    background-color:  var(--bs-body-color);
 }

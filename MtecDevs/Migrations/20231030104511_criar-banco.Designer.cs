@@ -11,7 +11,7 @@ using MtecDevs.Data;
 namespace MtecDevs.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20231016103627_criar-banco")]
+    [Migration("20231030104511_criar-banco")]
     partial class criarbanco
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -49,24 +49,24 @@ namespace MtecDevs.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "478b2abc-e3c8-4da3-a098-6755e2cc0ad1",
-                            ConcurrencyStamp = "aeb29708-92bb-4e2a-b084-7eff2d23ad2e",
+                            Id = "4a129659-78f3-4247-9a3f-f6158311e886",
+                            ConcurrencyStamp = "5ac90406-e115-49d4-a0ed-15a3c1ce5e0d",
                             Name = "Administrador",
                             NormalizedName = "ADMINISTRADOR"
                         },
                         new
                         {
-                            Id = "2c17416c-f881-4b3f-b86f-d1aa7bf556fd",
-                            ConcurrencyStamp = "8aa10203-1e76-4f24-b08d-887709bd3479",
+                            Id = "27570ef6-ab7f-41d2-89e7-b7550da3ee05",
+                            ConcurrencyStamp = "2bf1e89b-0dd6-40a9-9064-2c9484a27799",
                             Name = "Moderador",
-                            NormalizedName = "Moderador"
+                            NormalizedName = "MODERADOR"
                         },
                         new
                         {
-                            Id = "d4abd747-b7a5-44d8-a9f4-c3945620737a",
-                            ConcurrencyStamp = "3678697c-122b-4937-a23e-b95ad77800a5",
-                            Name = "Usuario",
-                            NormalizedName = "USUARIO"
+                            Id = "8fe1f8cd-9765-41b7-9d88-293536233f4d",
+                            ConcurrencyStamp = "fa57c86d-3e06-457e-a5f9-a947b2a42378",
+                            Name = "Usuário",
+                            NormalizedName = "USUÁRIO"
                         });
                 });
 
@@ -159,20 +159,20 @@ namespace MtecDevs.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "7ce4aa6d-15c2-47cf-9e36-7d6479021d88",
+                            Id = "a37bbf0d-03d1-47ad-983f-2cd22f534a4c",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "09a7bd61-61b6-4616-b2f2-9a376cf45651",
-                            Email = "risattimatheus@gmail.com",
+                            ConcurrencyStamp = "f613844e-13c5-4402-962c-bd873138ac4f",
+                            Email = "gallojunior@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
-                            NormalizedEmail = "RISATTIMATHEUS@GMAIL.COM",
-                            NormalizedUserName = "MAPOKO",
-                            PasswordHash = "AQAAAAEAACcQAAAAEKx1t1RAaFw4KIFWdGWw2+F4XE25BOmkkCyi2TLCsDmB4LPOUdvhVOtO10OI3FbVbA==",
-                            PhoneNumber = "14991911777",
+                            NormalizedEmail = "GALLOJUNIOR@GMAIL.COM",
+                            NormalizedUserName = "GALLOJUNIOR",
+                            PasswordHash = "AQAAAAEAACcQAAAAEPBxEdXfsh9Rc5chaqwl/2xg/wMnDzQBFKY3OM/VUvzpbAKOkiMk2WgpH+2y556wmw==",
+                            PhoneNumber = "14912345678",
                             PhoneNumberConfirmed = true,
-                            SecurityStamp = "1c49ba82-4174-40a9-b7b1-f1837f17e8a7",
+                            SecurityStamp = "320bf67e-35ca-49f0-ac02-1c2eac9c1514",
                             TwoFactorEnabled = false,
-                            UserName = "Mapoko"
+                            UserName = "GalloJunior"
                         });
                 });
 
@@ -238,8 +238,8 @@ namespace MtecDevs.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = "7ce4aa6d-15c2-47cf-9e36-7d6479021d88",
-                            RoleId = "478b2abc-e3c8-4da3-a098-6755e2cc0ad1"
+                            UserId = "a37bbf0d-03d1-47ad-983f-2cd22f534a4c",
+                            RoleId = "4a129659-78f3-4247-9a3f-f6158311e886"
                         });
                 });
 
@@ -333,11 +333,11 @@ namespace MtecDevs.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = "7ce4aa6d-15c2-47cf-9e36-7d6479021d88",
-                            DataNascimento = new DateTime(2007, 2, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            UserId = "a37bbf0d-03d1-47ad-983f-2cd22f534a4c",
+                            DataNascimento = new DateTime(1981, 8, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Foto = "/img/usuarios/avatar.png",
-                            Nome = "Matheus Clementino Risatti",
-                            TipoDevId = (byte)2
+                            Nome = "José Antonio Gallo Junior",
+                            TipoDevId = (byte)1
                         });
                 });
 
