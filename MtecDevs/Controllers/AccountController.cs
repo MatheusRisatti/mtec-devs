@@ -88,4 +88,34 @@ public class AccountController : Controller
         }
     }
 
+    [HttpGet]
+    public IActionResult Register()
+    {
+        RegisterVM register = new RegisterVM();
+        return View(register);
+    }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Register(RegisterVM model)
+    {
+        if (ModelState.IsValid)
+        {
+            var user = new IdentityUser { UserName = model.Email, Email = model.Email };
+            var result = await _userManager.CreateAsync(user, model.Senha);
+
+            if (result.Succeeded)
+            {
+                _logger.LogInformation($"Usuário {model.Email} criou uma nova conta");
+                return RedirectToAction("Login");
+            }
+            foreach (var error in result.Errors)
+            {
+                ModelState.AddModelError(string.Empty, error.Description);
+            }
+        }
+        return View(model);
+    }
+
+
 }
